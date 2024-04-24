@@ -1,0 +1,329 @@
+:root {
+    --blue: #2196F3;
+    --white: #FFFFFF;
+    --black: #212121;
+    --gray: #757575;
+    --black-background: #2F303A;
+    --gray-background: #F5F4FA;
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+font-family: var(--primary-font);
+color: var(--black);
+}
+/* Tb sa folosim 2 noi clase generice: container si section */
+.section {
+    width: 1600px;
+    margin: 0 auto;
+    padding: 94px 0;
+}
+.container {
+    width: 1200px;
+    display: flex;
+    margin: auto;
+}
+
+/* Header section style*/
+.header.section {
+    width: 1600px;
+    padding: 0;
+    border-bottom: 1px solid #ECECEC;
+}
+.header.container {
+    height: 80px;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+.header__logo a,
+.footer__logo a {
+    font-family: var(--secondary-font);
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
+.header__logo a {
+    color: var(--black)
+}
+.header__logo span,
+.footer__logo span {
+    color: var(--blue)
+}
+
+.header__navigation ul {
+    list-style: none;
+    display: flex;
+    width: 275px;
+    justify-content: space-between;
+    color: var(--black)
+}
+
+.header__navigation a {
+    color: var(--black)
+} 
+.header__info {
+    display: flex;
+    width: 275px;
+    justify-content: space-between;
+}
+.header__navigation a,
+.header__info a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+.header__info a {
+    color: var(--gray);
+}
+.header__navigation a:hover,
+.header__navigation a:focus,
+.header__info a:hover,
+.header__info a:focus {
+    color: var(--blue);
+}
+/* Hero section style*/
+
+.hero-section.section {
+    width: 1600px;
+    background-color: var(--black-background);
+}
+.hero-section.container {
+    height: 600px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    /* background-color: var(--black-background); */
+    color: var(--white);
+    /* font-family: var(--primary-font); */
+ 
+}
+.hero-section__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+}
+.hero-section__service {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    background-color: var(--blue);
+    color: var(--white);
+    cursor: pointer;
+}
+.hero-section__service:hover,
+.hero-section__service:focus {
+    transform: scale(1.1);
+}
+
+/* What we do section style*/
+
+.we-do-section.section {
+    background-color: var(--white);
+}
+.we-do-section__features.container {
+    list-style: none;
+    justify-content:space-between ;
+    width: 1170px; /* vs. clasa container cu 1200px */
+    margin-bottom: 94px;
+
+}
+
+.we-do-section__features h5 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+}
+
+.we-do-section__features p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--gray);
+    letter-spacing: 0.03em;
+}
+
+.we-do-section__title {
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--black);
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.we-do-section_images > img,
+.team-section__card > img,
+.portofoliu__exemplu > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.we-do-section_images.container {
+    display: flex;
+    justify-content: space-between;
+    width: 1170px;    /* vs. clasa container cu 1200px */
+}
+
+/* Our Team section style */
+.team-section.section {
+    background-color: var(--gray-background);
+    height: 648px;
+    text-align: center;
+}
+.team-section__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+}
+.team-section__cards.container {
+    justify-content:center;
+    gap: 30px;
+    margin: auto; 
+}
+.team-section__card {
+    background: var(--white);
+    border-radius: 0px 0px 4px 4px;
+    opacity: 0px;
+    box-shadow: 0px 2px 1px 0px #00000033;
+    box-shadow: 0px 1px 1px 0px #00000024;
+    box-shadow: 0px 1px 3px 0px #0000001F;
+
+}
+.team-section__card__nume {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.team-section__card__job {
+    font-size: 16px;
+    line-height: 1.2;
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+/* Footer section style*/
+
+.footer.section {
+    padding: 0;
+    background-color: var(--black-background);
+}
+.footer.container {
+    height: 251px;
+    flex-direction: column; 
+    justify-content:center;
+    
+}
+.footer__logo a {
+    color: var(--white);
+    
+}
+.footer__address {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 2;
+    font-style: normal; 
+    margin-top: 28px;
+
+}
+.footer__address a {
+    color: var(--white);
+    text-decoration: none;
+    cursor: pointer; 
+ } 
+.footer__address a {
+    color: var(--gray);
+}
+.footer__address a:hover,
+.footer__address a:focus {
+    color: var(--blue);
+}
+   
+ /* Portofoliu style */
+
+ .portofoliu.section {
+    background-color: var(--white);
+    margin: auto;
+
+ }
+ 
+ .portofoliu__navigare__lista.container {
+    width: 1170px;
+    justify-content: center;
+    gap: 8px;
+    list-style: none;
+    margin-bottom: 50px;
+  
+ }
+
+ /* butoanele de navigare*/
+ .portofoliu__navigare button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    background-color: var(--gray-background);
+    cursor: pointer;
+    padding: 6px 22px;
+    border-radius: 4px 0px 0px 0px;
+ }
+ .portofoliu__navigare button:hover,
+ .portofoliu__navigare button:focus {
+    background-color: var(--blue);
+    color: var(--white);
+ }
+ /* exemple din portofoliu*/
+
+ .portofoliu__exemple.container {
+    width: 1170px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: auto;
+ }
+.portofoliu__exemplu__nume {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    padding-left: 24px;
+    padding-top: 20px;
+    padding-bottom: 4px;
+    text-align: left;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+}
+.portofoliu__exemplu__tip {
+    /* font-weight: 400; */
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--gray);
+    letter-spacing: 0.03em;
+    text-align: left;
+    padding-left: 24px;
+    padding-bottom: 20px;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+}
