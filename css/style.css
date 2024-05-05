@@ -95,26 +95,35 @@ color: var(--black);
 
 .hero-section.section {
     width: 1600px;
-    background-color: var(--black-background);
+    background-color: transparent;
+    /* Change background color to transparent */
+    position: relative;
 }
+
 .hero-section.container {
     height: 600px;
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* flex-wrap: wrap; */
-    /* background-color: var(--black-background); */
-    color: var(--white);
-    /* font-family: var(--primary-font); */
- 
+    position: relative;
 }
+
 .hero-section__title {
-    font-weight: 900;
+    font-family: Roboto;
     font-size: 44px;
-    line-height: 1.4;
+    font-weight: 900;
+    line-height: 60px;
     letter-spacing: 0.06em;
+    text-align: center;
+    width: 696px;
+    height: 120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 0px;
+    opacity: 1;
+    position: absolute;
+    color: var(--white);
+    z-index: 1;
 }
+
 .hero-section__service {
     font-weight: 700;
     font-size: 16px;
@@ -123,23 +132,48 @@ color: var(--black);
     background-color: var(--blue);
     color: var(--white);
     cursor: pointer;
+    position: absolute;
+    top: calc(50% + 100px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
 }
+
 .hero-section__service:hover,
 .hero-section__service:focus {
     transform: scale(1.1);
 }
 
-/* What we do section style*/
+.hero-section img {
+    position: absolute;
+    top: 80px;
+    /* Adjusted position from the top */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1600px;
+    /* Set width to 1600px */
+    height: 600px;
+    /* Set height to 600px */
+    object-fit: fill;
+    /* Fill the container without maintaining aspect ratio */
+    opacity: 1;
+    /* Set opacity to 1 to make it visible */
+    z-index: 0;
+    /* Ensure image is behind text and button */
+}
+
+/* What we do section style */
 
 .we-do-section.section {
     background-color: var(--white);
 }
+
 .we-do-section__features.container {
     list-style: none;
-    justify-content:space-between ;
-    width: 1170px; /* vs. clasa container cu 1200px */
+    justify-content: space-between;
+    width: 1170px;
+    /* vs. clasa container cu 1200px */
     margin-bottom: 94px;
-
 }
 
 .we-do-section__features h5 {
@@ -167,17 +201,32 @@ color: var(--black);
     text-align: center;
 }
 
-.we-do-section_images > img,
-.team-section__card > img,
-.portofoliu__exemplu > img {
+.we-do-section_images>img,
+.team-section__card>img,
+.portofoliu__exemplu>img {
     display: block;
     max-width: 100%;
     height: auto;
 }
+
 .we-do-section_images.container {
     display: flex;
     justify-content: space-between;
-    width: 1170px;    /* vs. clasa container cu 1200px */
+    width: 1170px;
+    /* vs. clasa container cu 1200px */
+}
+
+.we-do-icon {
+    display: inline-block;
+    /* Ensure the SVG is displayed inline */
+    width: 24px;
+    /* Adjust width as needed */
+    height: 24px;
+    /* Adjust height as needed */
+    fill: currentColor;
+    /* Fill color with the current text color */
+    vertical-align: middle;
+    /* Align SVG vertically with text */
 }
 
 /* Our Team section style */
@@ -222,6 +271,21 @@ color: var(--black);
     margin-bottom: 30px;
 }
 
+.footer-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* Center the text horizontally */
+}
+
+.footer-text {
+    /* Add styles for the text if needed */
+    margin: 0;
+    /* Remove default margin */
+}
+
 /* Footer section style*/
 
 .footer.section {
@@ -259,6 +323,12 @@ color: var(--black);
 .footer__address a:focus {
     color: var(--blue);
 }
+
+.footer {
+    position: relative; /* Ensure the footer is positioned relative */
+}
+
+
    
  /* Portofoliu style */
 
