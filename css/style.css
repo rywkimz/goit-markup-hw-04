@@ -112,6 +112,23 @@ color: var(--black);
     fill: var(--blue);
 }
 
+.big-background {
+    position: relative;
+    background:
+        /* Top gradient layer */
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        /* Bottom gradient layer */
+        linear-gradient(135deg, var(--black) 0%, var(--blue) 100%);
+    background-size: cover;
+    background-position: center;
+    padding-top: 200px;
+    /* Adjust as needed */
+    padding-bottom: 200px;
+    /* Adjust as needed */
+}
+
+/* Adjust the padding to ensure the content is positioned correctly */
+
 /* Contact text */
 .contact__text {
     font-weight: 500;
@@ -253,17 +270,19 @@ color: var(--black);
 }
 
 /* What we do section style */
-
 .we-do-section.section {
     background-color: var(--white);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Adding shadow effect */
 }
 
 .we-do-section__features.container {
     list-style: none;
     justify-content: space-between;
     width: 1170px;
-    /* vs. clasa container cu 1200px */
     margin-bottom: 94px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Adding shadow effect */
 }
 
 .we-do-section__features h5 {
@@ -303,28 +322,32 @@ color: var(--black);
     display: flex;
     justify-content: space-between;
     width: 1170px;
-    /* vs. clasa container cu 1200px */
 }
 
 .we-do-icon {
     display: inline-block;
-    /* Ensure the SVG is displayed inline */
     width: 24px;
-    /* Adjust width as needed */
     height: 24px;
-    /* Adjust height as needed */
     fill: currentColor;
-    /* Fill color with the current text color */
     vertical-align: middle;
-    /* Align SVG vertically with text */
 }
 
-/* Our Team section style */
+/* New CSS for the SVG icons within list items */
+.we-do-section__features li svg {
+    width: 70px;
+    height: 70px;
+    fill: currentColor;
+    /* or specify a specific color */
+    margin-bottom: 10px;
+}
+
+/* Our Team section style with SVG icon styling */
 .team-section.section {
     background-color: var(--gray-background);
     height: 648px;
     text-align: center;
 }
+
 .team-section__title {
     font-weight: 700;
     font-size: 36px;
@@ -332,20 +355,22 @@ color: var(--black);
     letter-spacing: 0.03em;
     margin-bottom: 50px;
 }
+
 .team-section__cards.container {
-    justify-content:center;
+    justify-content: center;
     gap: 30px;
-    margin: auto; 
+    margin: auto;
 }
+
 .team-section__card {
     background: var(--white);
     border-radius: 0px 0px 4px 4px;
     opacity: 0px;
-    box-shadow: 0px 2px 1px 0px #00000033;
-    box-shadow: 0px 1px 1px 0px #00000024;
-    box-shadow: 0px 1px 3px 0px #0000001F;
-
+    box-shadow: 0px 2px 1px 0px #00000033,
+        0px 1px 1px 0px #00000024,
+        0px 1px 3px 0px #0000001F;
 }
+
 .team-section__card__nume {
     font-weight: 500;
     font-size: 16px;
@@ -354,6 +379,7 @@ color: var(--black);
     margin-top: 30px;
     margin-bottom: 10px;
 }
+
 .team-section__card__job {
     font-size: 16px;
     line-height: 1.2;
@@ -361,83 +387,99 @@ color: var(--black);
     margin-bottom: 30px;
 }
 
-.footer-box {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    /* Center the text horizontally */
-}
-
-.footer-text {
-    /* Add styles for the text if needed */
-    margin: 0;
-    /* Remove default margin */
-}
-
-.team-box {
-    display: flex;
-    justify-content: space-around;
-}
-
-.team-box use {
+/* Styles for SVG icons within the team section card */
+.team-section__card svg {
     width: 24px;
     height: 24px;
     fill: #000;
     /* Adjust color as needed */
 }
 
-.team-box use:hover {
+.team-section__card svg:hover {
     fill: #007bff;
     /* Adjust hover color as needed */
 }
 
-/* Footer section style*/
+/* Regular Customers section style */
+.regular-customers.section {
+    background-color: var(--white);
+    padding: 50px 0;
+    /* Adjust padding as needed */
+    text-align: center;
+}
 
+.regular-customers__title {
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--black);
+    margin-bottom: 30px;
+}
+
+.regular-customers svg {
+    width: 106px;
+    height: 60px;
+    margin: 20px;
+    fill: var(--primary-color);
+    /* Adjust fill color as needed */
+}
+
+/* Optional hover effect for SVG icons */
+.regular-customers svg:hover {
+    opacity: 0.8;
+    /* Adjust opacity as needed */
+}
+
+/* Footer section style*/
 .footer.section {
     padding: 0;
     background-color: var(--black-background);
 }
+
 .footer.container {
     height: 251px;
-    flex-direction: column; 
-    justify-content:center;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 .footer__logo a {
     color: var(--white);
-    
 }
+
 .footer__address {
     color: var(--white);
     font-weight: 400;
     font-size: 14px;
     line-height: 2;
-    font-style: normal; 
+    font-style: normal;
     margin-top: 28px;
-
 }
+
 .footer__address a {
     color: var(--white);
     text-decoration: none;
-    cursor: pointer; 
- } 
-.footer__address a {
-    color: var(--gray);
+    cursor: pointer;
 }
+
 .footer__address a:hover,
 .footer__address a:focus {
     color: var(--blue);
 }
 
-.footer {
-    position: relative; /* Ensure the footer is positioned relative */
+.footer svg {
+    width: 44px;
+    height: 44px;
+    margin: 10px;
+    fill: var(--white);
+}
+
+.footer svg:hover {
+    opacity: 0.8;
 }
 
 
    
- /* Portofoliu style */
+ /* Style Portfolio */
 
  .portofoliu.section {
     background-color: var(--white);
@@ -454,23 +496,30 @@ color: var(--black);
   
  }
 
- /* butoanele de navigare*/
+ /* Navigation Buttons */
+
  .portofoliu__navigare button {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.6;
-    text-align: center;
-    background-color: var(--gray-background);
-    cursor: pointer;
-    padding: 6px 22px;
-    border-radius: 4px 0px 0px 0px;
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 1.6;
+     text-align: center;
+     background-color: var(--gray-background);
+     cursor: pointer;
+     padding: 6px 22px;
+     border-radius: 4px 0px 0px 0px;
+     transition: box-shadow 0.3s ease;
+     /* Adding transition for smooth effect */
  }
+
  .portofoliu__navigare button:hover,
  .portofoliu__navigare button:focus {
-    background-color: var(--blue);
-    color: var(--white);
+     background-color: var(--blue);
+     color: var(--white);
+     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+     /* Adding shadow effect */
  }
- /* exemple din portofoliu*/
+ 
+ /* Exemples Portfolio*/
 
  .portofoliu__exemple.container {
     width: 1170px;
@@ -503,4 +552,13 @@ color: var(--black);
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
+}
+
+.portofoliu__exemplu:hover .portofoliu__exemplu__nume,
+.portofoliu__exemplu:hover .portofoliu__exemplu__tip {
+    color: var(--black);
+    /* Ensure text color remains black */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add shadow effect */
+    cursor: pointer;
 }

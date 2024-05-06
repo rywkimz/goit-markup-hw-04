@@ -3,14 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Studio</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <title>Portofoliu</title>
+    <style>
+      /* CSS styles for SVG icons */
+      .icon {
+        width: 24px; /* Set the width of the SVG */
+        height: 24px; /* Set the height of the SVG */
+        fill: currentColor; /* Use the current text color for SVG fill */
+        vertical-align: middle; /* Align SVG vertically */
+      }
+    </style>
+
     <!-- Normalizare stiluri/> -->
 
     <link
@@ -26,6 +29,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+
     <!--Link la stiluri css /> -->
 
     <link rel="stylesheet" href="./css/style.css" />
@@ -36,7 +40,7 @@
     <header class="header section">
       <div class="header container">
         <div class="header__logo">
-          <a href="./webstudio.html"
+          <a href="webstudio.html"
             ><p><span>Web</span>Studio</p></a
           >
         </div>
@@ -44,33 +48,38 @@
           <ul>
             <li><a href="./index.html">Studio</a></li>
             <li><a href="./portfolio.html">Portfolio</a></li>
-            <li><a href="./contacts.html">Contacts</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
           </ul>
         </nav>
         <div class="header__info">
           <div class="contact">
-            <svg class="contact__icon">
-              <use href="./importare-svg/icons/envelope.svg"></use>
-            </svg>
-            <a class="contact__link" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
+            <a class="contact__link" href="mailto:info@devstudio.com">
+              <svg width="16" height="12" viewBox="0 0 16 12">
+                <use href="./importare-svg/icons/custom-svgs.svg#envelope" />
+              </svg>
+              <span class="contact__text">info@devstudio.com</span>
+            </a>
           </div>
           <div class="contact">
-            <svg class="contact__icon">
-              <use href="./importare-svg/icons/telefon.svg"></use>
-            </svg>
-            <a class="contact__link" href="tel:+12127724150">+1 212-772-4150</a>
+            <a class="contact__link" href="tel:+12127724150">
+              <svg width="10" height="16" viewBox="0 0 10 16">
+                <use href="./importare-svg/icons/custom-svgs.svg#telefon" />
+              </svg>
+              <span class="contact__text">+1 212-772-4150 </span>
+            </a>
           </div>
         </div>
       </div>
     </header>
-    <!--portiune principala a paginii Studio -->
+
+    <!--Portiune principala a paginii Studio -->
+
     <main>
       <!--Hero section-->
 
       <section class="hero-section section">
         <div class="hero-section container">
+          <img src="./images/imag oameni.jpg" />
           <h1 class="hero-section__title">
             EFFECTIVE SOLUTIONS FOR <br />YOUR BUSINESS
           </h1>
@@ -79,13 +88,14 @@
           </button>
         </div>
       </section>
+
       <!--What we do section-->
 
       <section class="we-do-section section">
         <ul class="we-do-section__features container">
           <li>
-            <svg class="we-do-icon">
-              <use href="./importare-svg/icons/antenna.svg"></use>
+            <svg width="70" height="70">
+              <use href="./importare-svg/icons/custom-svgs.svg#antenna"></use>
             </svg>
             <h5>ATTENTION TO DETAILS</h5>
             <p>
@@ -94,8 +104,8 @@
             </p>
           </li>
           <li>
-            <svg class="we-do-icon">
-              <use xlink:href="./importare-svg/icons/ceas.svg"></use>
+            <svg width="70" height="70">
+              <use href="./importare-svg/icons/custom-svgs.svg#ceas"></use>
             </svg>
             <h5>PUNCTUALITY</h5>
             <p>
@@ -104,8 +114,8 @@
             </p>
           </li>
           <li>
-            <svg class="we-do-icon">
-              <use xlink:href="./importare-svg/icons/computer.svg"></use>
+            <svg width="70" height="70">
+              <use href="./importare-svg/icons/custom-svgs.svg#computer"></use>
             </svg>
             <h5>PLANNING</h5>
             <p>
@@ -114,8 +124,8 @@
             </p>
           </li>
           <li>
-            <svg class="we-do-icon">
-              <use xlink:href="./importare-svg/icons/astronaut.svg"></use>
+            <svg width="70" height="70">
+              <use href="./importare-svg/icons/custom-svgs.svg#astronaut"></use>
             </svg>
             <h5>MODERN TECHNOLOGIES</h5>
             <p>
@@ -125,7 +135,9 @@
           </li>
         </ul>
         <h2 class="we-do-section__title">What we do</h2>
-        <!--div cu imagini-->
+
+        <!--Div cu imagini-->
+
         <div class="we-do-section_images container">
           <img
             src="./images/img1.jpg"
@@ -147,13 +159,17 @@
           />
         </div>
       </section>
+
       <!--Our Team section-->
 
       <section class="team-section section">
         <h2 class="team-section__title">Our Team</h2>
+
         <!--Container cu carduri despre membrii echipei-->
+
         <div class="team-section__cards container">
           <!--Container 1-->
+
           <div class="team-section__card">
             <img
               src="./images/img4.jpg"
@@ -163,14 +179,22 @@
             />
             <p class="team-section__card__nume">Christopher Walker</p>
             <p class="team-section__card__job">Product Designer</p>
-            <svg class="footer-box">
-              <use href="./importare-svg/icons/insta.svg"></use>
-              <use href="./importare-svg/icons/twitter.svg"></use>
-              <use href="./importare-svg/icons/facebook.svg"></use>
-              <use href="./importare-svg/icons/linkdlin.svg"></use>
+            <svg width="44" height="44">
+              <use href="./importare-svg/icons/custom-svgs.svg#insta"></use>
+            </svg>
+            <svg width="44" height="44">
+              <use href="./importare-svg/icons/custom-svgs.svg#twitter"></use>
+            </svg>
+            <svg width="44" height="44">
+              <use href="./importare-svg/icons/custom-svgs.svg#facebook"></use>
+            </svg>
+            <svg width="44" height="44">
+              <use href="./importare-svg/icons/custom-svgs.svg#linkdlin"></use>
             </svg>
           </div>
+
           <!--Container 2-->
+
           <div class="team-section__card">
             <img
               src="./images/img5.jpg"
@@ -180,14 +204,22 @@
             />
             <p class="team-section__card__nume">Kylie Evans</p>
             <p class="team-section__card__job">Frontend Developer</p>
-            <svg class="footer-box">
-              <use href="./importare-svg/icons/insta.svg"></use>
-              <use href="./importare-svg/icons/twitter.svg"></use>
-              <use href="./importare-svg/icons/facebook.svg"></use>
-              <use href="./importare-svg/icons/linkdlin.svg"></use>
+            <svg width="44" height="44">
+              <use href="./importare-svg/icons/custom-svgs.svg#insta"></use>
+            </svg>
+            <svg width="44" height="44">
+              <use href="./importare-svg/icons/custom-svgs.svg#twitter"></use>
+            </svg>
+            <svg width="44" height="44">
+              <use href="./importare-svg/icons/custom-svgs.svg#facebook"></use>
+            </svg>
+            <svg width="44" height="44">
+              <use href="./importare-svg/icons/custom-svgs.svg#linkdlin"></use>
             </svg>
           </div>
+
           <!--Container 3-->
+
           <div class="team-section__card">
             <img
               src="./images/img6.jpg"
@@ -197,14 +229,22 @@
             />
             <p class="team-section__card__nume">Ryan Harris</p>
             <p class="team-section__card__job">Marketing</p>
-            <svg class="footer-box">
-              <use href="./importare-svg/icons/insta.svg"></use>
-              <use href="./importare-svg/icons/twitter.svg"></use>
-              <use href="./importare-svg/icons/facebook.svg"></use>
-              <use href="./importare-svg/icons/linkdlin.svg"></use>
+            <svg width="44" height="44">
+              <use href="./importare-svg/icons/custom-svgs.svg#insta"></use>
+            </svg>
+            <svg width="44" height="44">
+              <use href="./importare-svg/icons/custom-svgs.svg#twitter"></use>
+            </svg>
+            <svg width="44" height="44">
+              <use href="./importare-svg/icons/custom-svgs.svg#facebook"></use>
+            </svg>
+            <svg width="44" height="44">
+              <use href="./importare-svg/icons/custom-svgs.svg#linkdlin"></use>
             </svg>
           </div>
+
           <!--Container 4-->
+
           <div class="team-section__card">
             <img
               src="./images/img7.jpg"
@@ -214,27 +254,47 @@
             />
             <p class="team-section__card__nume">Tyler Moore</p>
             <p class="team-section__card__job">UI Designer</p>
-            <svg class="footer-box">
-              <use href="./importare-svg/icons/insta.svg"></use>
-              <use href="./importare-svg/icons/twitter.svg"></use>
-              <use href="./importare-svg/icons/facebook.svg"></use>
-              <use href="./importare-svg/icons/linkdlin.svg"></use>
+            <svg width="44" height="44">
+              <use href="./importare-svg/icons/custom-svgs.svg#insta"></use>
             </svg>
-          </div>
-          <div class="footer-box">
-            <p class="footer-text">Regular Customers</p>
-            <svg class="footer-box">
-              <use href="./importare-svg/icons/patrat-logo.svg"></use>
-              <use href="./importare-svg/icons/company-logo.svg"></use>
-              <use href="./importare-svg/icons/ceva-logo.svg"></use>
-              <use href="./importare-svg/icons/picatura-logo.svg"></use>
-              <use href="./importare-svg/icons/frunze-logo.svg"></use>
-              <use href="./importare-svg/icons/dreptunghi-logo.svg"></use>
+            <svg width="44" height="44">
+              <use href="./importare-svg/icons/custom-svgs.svg#twitter"></use>
+            </svg>
+            <svg width="44" height="44">
+              <use href="./importare-svg/icons/custom-svgs.svg#facebook"></use>
+            </svg>
+            <svg width="44" height="44">
+              <use href="./importare-svg/icons/custom-svgs.svg#linkdlin"></use>
             </svg>
           </div>
         </div>
       </section>
+
+      <section class="regular-customers section">
+        <h2 class="regular-customers__title">Regular Customers</h2>
+        <svg width="106" height="60">
+          <use href="./importare-svg/icons/custom-svgs.svg#patrat-logo"></use>
+        </svg>
+        <svg width="106" height="60">
+          <use href="./importare-svg/icons/custom-svgs.svg#company-logo"></use>
+        </svg>
+        <svg width="106" height="60">
+          <use href="./importare-svg/icons/custom-svgs.svg#ceva-logo"></use>
+        </svg>
+        <svg width="106" height="60">
+          <use href="./importare-svg/icons/custom-svgs.svg#picatura-logo"></use>
+        </svg>
+        <svg width="106" height="60">
+          <use href="./importare-svg/icons/custom-svgs.svg#frunze-logo"></use>
+        </svg>
+        <svg width="106" height="60">
+          <use
+            href="./importare-svg/icons/custom-svgs.svg#dreptunghi-logo"
+          ></use>
+        </svg>
+      </section>
     </main>
+
     <!--Footer section-->
 
     <footer class="footer section">
@@ -249,11 +309,17 @@
           <a href="mailto:info@devstudio.com">info@devstudio.com</a><br />
           <a href="tel:+12127724150">+1 212-772-4150</a>
         </address>
-        <svg class="footer-box">
-          <use href="./importare-svg/icons/insta.svg"></use>
-          <use href="./importare-svg/icons/twitter.svg"></use>
-          <use href="./importare-svg/icons/facebook.svg"></use>
-          <use href="./importare-svg/icons/linkdlin.svg"></use>
+        <svg width="44" height="44">
+          <use href="./importare-svg/icons/custom-svgs.svg#insta"></use>
+        </svg>
+        <svg width="44" height="44">
+          <use href="./importare-svg/icons/custom-svgs.svg#twitter"></use>
+        </svg>
+        <svg width="44" height="44">
+          <use href="./importare-svg/icons/custom-svgs.svg#facebook"></use>
+        </svg>
+        <svg width="44" height="44">
+          <use href="./importare-svg/icons/custom-svgs.svg#linkdlin"></use>
         </svg>
       </div>
     </footer>
