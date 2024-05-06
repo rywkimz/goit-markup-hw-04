@@ -17,7 +17,7 @@ body {
 font-family: var(--primary-font);
 color: var(--black);
 }
-/* Tb sa folosim 2 noi clase generice: container si section */
+/*  Container si Section */
 .section {
     width: 1600px;
     margin: 0 auto;
@@ -29,18 +29,20 @@ color: var(--black);
     margin: auto;
 }
 
-/* Header section style*/
+/* Header section style */
 .header.section {
     width: 1600px;
     padding: 0;
     border-bottom: 1px solid #ECECEC;
 }
+
 .header.container {
     height: 80px;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     padding: 0 15px;
 }
+
 .header__logo a,
 .footer__logo a {
     font-family: var(--secondary-font);
@@ -49,13 +51,16 @@ color: var(--black);
     line-height: 1.2;
     letter-spacing: 0.03em;
     text-decoration: none;
+    color: var(--black);
 }
+
 .header__logo a {
-    color: var(--black)
+    color: var(--black);
 }
+
 .header__logo span,
 .footer__logo span {
-    color: var(--blue)
+    color: var(--blue);
 }
 
 .header__navigation ul {
@@ -63,40 +68,67 @@ color: var(--black);
     display: flex;
     width: 275px;
     justify-content: space-between;
-    color: var(--black)
+    color: var(--black);
 }
 
 .header__navigation a {
-    color: var(--black)
-} 
+    color: var(--black);
+}
+
 .header__info {
     display: flex;
     width: 275px;
     justify-content: space-between;
 }
+
 .header__navigation a,
-.header__info a {
+.header__info a,
+.contact__link {
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    color: var(--gray);
 }
+
 .header__info a {
     color: var(--gray);
 }
+
 .header__navigation a:hover,
 .header__navigation a:focus,
 .header__info a:hover,
 .header__info a:focus {
     color: var(--blue);
 }
+
+.contact__link:hover .contact__text,
+.contact__link:focus .contact__text {
+    color: var(--blue);
+}
+
+.contact__link:hover svg {
+    fill: var(--blue);
+}
+
+/* Contact text */
+.contact__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--gray);
+    /* Add any additional styles for the contact text here */
+}
+
 /* Hero section style*/
 
+/* CSS for studio.html */
 .hero-section.section {
     width: 1600px;
     background-color: transparent;
-    /* Change background color to transparent */
+    /* Set background color to transparent */
     position: relative;
 }
 
@@ -106,7 +138,7 @@ color: var(--black);
 }
 
 .hero-section__title {
-    font-family: Roboto;
+    font-family: var(--primary-font);
     font-size: 44px;
     font-weight: 900;
     line-height: 60px;
@@ -147,19 +179,77 @@ color: var(--black);
 .hero-section img {
     position: absolute;
     top: 80px;
-    /* Adjusted position from the top */
     left: 50%;
     transform: translateX(-50%);
     width: 1600px;
-    /* Set width to 1600px */
     height: 600px;
-    /* Set height to 600px */
     object-fit: fill;
-    /* Fill the container without maintaining aspect ratio */
     opacity: 1;
-    /* Set opacity to 1 to make it visible */
     z-index: 0;
-    /* Ensure image is behind text and button */
+}
+
+/* CSS for webstudio.html */
+.hero-section.section {
+    width: 1600px;
+    background-color: #2F303A;
+    /* Background color for webstudio.html */
+    position: relative;
+}
+
+.hero-section.container {
+    height: 600px;
+    position: relative;
+}
+
+.hero-section__title {
+    font-family: var(--primary-font);
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 60px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    width: 696px;
+    height: 120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 0px;
+    opacity: 1;
+    position: absolute;
+    color: var(--white);
+    z-index: 1;
+}
+
+.hero-section__service {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    background-color: var(--blue);
+    color: var(--white);
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% + 100px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.hero-section__service:hover,
+.hero-section__service:focus {
+    transform: scale(1.1);
+}
+
+.hero-section img {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1600px;
+    height: 600px;
+    object-fit: fill;
+    opacity: 1;
+    z-index: 0;
 }
 
 /* What we do section style */
@@ -284,6 +374,23 @@ color: var(--black);
     /* Add styles for the text if needed */
     margin: 0;
     /* Remove default margin */
+}
+
+.team-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.team-box use {
+    width: 24px;
+    height: 24px;
+    fill: #000;
+    /* Adjust color as needed */
+}
+
+.team-box use:hover {
+    fill: #007bff;
+    /* Adjust hover color as needed */
 }
 
 /* Footer section style*/
