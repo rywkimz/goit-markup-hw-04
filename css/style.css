@@ -477,8 +477,26 @@ color: var(--black);
     opacity: 0.8;
 }
 
+.footer-text {
+    color: var(--white);
+    width: 79px;
+    height: 16px;
+    top: 2754px;
+    left: 516px;
+    gap: 0px;
+    opacity: 0;
+}
 
-   
+.footer__contact-info {
+    margin-bottom: 20px;
+    /* Adjust the margin as needed */
+}
+
+.footer__social-icons {
+    margin-top: 10px; /* Adjust the margin-top value as needed */
+}
+
+
  /* Style Portfolio */
 
  .portofoliu.section {
