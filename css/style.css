@@ -423,6 +423,22 @@ color: var(--black);
     /* Adjust fill color as needed */
 }
 
+.svg-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Adjust the gap between SVG elements */
+    border: 2px solid #ccc;
+    /* Border style */
+    padding: 10px;
+    /* Padding inside the box */
+}
+
+.svg-box svg {
+    flex: 0 0 calc(33.333% - 20px);
+    /* Adjust the width of each SVG element */
+}
+
 /* Optional hover effect for SVG icons */
 .regular-customers svg:hover {
     opacity: 0.8;
