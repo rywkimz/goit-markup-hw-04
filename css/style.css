@@ -115,19 +115,13 @@ color: var(--black);
 .big-background {
     position: relative;
     background:
-        /* Top gradient layer */
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        /* Bottom gradient layer */
-        linear-gradient(135deg, var(--black) 0%, var(--blue) 100%);
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    linear-gradient(135deg, var(--black) 0%, var(--blue) 100%);
     background-size: cover;
     background-position: center;
     padding-top: 200px;
-    /* Adjust as needed */
     padding-bottom: 200px;
-    /* Adjust as needed */
 }
-
-/* Adjust the padding to ensure the content is positioned correctly */
 
 /* Contact text */
 .contact__text {
@@ -136,7 +130,6 @@ color: var(--black);
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--gray);
-    /* Add any additional styles for the contact text here */
 }
 
 /* Hero section style*/
@@ -145,7 +138,6 @@ color: var(--black);
 .hero-section.section {
     width: 1600px;
     background-color: transparent;
-    /* Set background color to transparent */
     position: relative;
 }
 
@@ -209,7 +201,6 @@ color: var(--black);
 .hero-section-studio.section {
     width: 1600px;
     background-color: transparent;
-    /* Background color for webstudio.html */
     position: relative;
 }
 
@@ -217,7 +208,6 @@ color: var(--black);
 .hero-section.section {
     width: 1600px;
     background-color: #2F303A;
-    /* Background color for webstudio.html */
     position: relative;
 }
 
@@ -288,7 +278,6 @@ color: var(--black);
     width: 1170px;
     margin-bottom: 94px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* Adding shadow effect */
 }
 
 .we-do-section__features h5 {
@@ -343,7 +332,6 @@ color: var(--black);
     width: 70px;
     height: 70px;
     fill: currentColor;
-    /* or specify a specific color */
     margin-bottom: 10px;
 }
 
@@ -398,22 +386,17 @@ color: var(--black);
     width: 24px;
     height: 24px;
     fill: #000;
-    /* Adjust color as needed */
 }
 
 .team-section__card svg:hover {
     fill: #007bff;
-    /* Adjust hover color as needed */
 }
 
 .team-icons {
     display: flex;
     gap: 10px;
-    /* Adjust the gap between icons as needed */
     align-items: center;
-    /* Center the icons vertically */
     justify-content: center;
-    /* Center the icons horizontally */
 }
 
 .team-icons svg {
@@ -478,11 +461,13 @@ color: var(--black);
     transition: border-color 0.3s ease;
 }
 
+.regular svg:hover use {
+    filter: invert(75%) sepia(79%) saturate(2476%) hue-rotate(213deg) brightness(118%) contrast(119%);
+}
+
 .regular svg:hover {
     border-color: #2196f3;
     cursor: pointer;
-    color:#2196f3;
-    fill: #2196f3;
 }
 
 .regular svg path {
@@ -572,7 +557,6 @@ color: var(--black);
     gap: 10px;
     align-items: center;
     justify-content: center;
-    /* Center align the icons horizontally */
 }
 
 .icons svg {
@@ -629,7 +613,6 @@ color: var(--black);
      padding: 6px 22px;
      border-radius: 4px 0px 0px 0px;
      transition: box-shadow 0.3s ease;
-     /* Adding transition for smooth effect */
  }
 
  .portofoliu__navigare button:hover,
@@ -637,7 +620,6 @@ color: var(--black);
      background-color: var(--blue);
      color: var(--white);
      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-     /* Adding shadow effect */
  }
  
  /* Exemples Portfolio*/
@@ -662,7 +644,6 @@ color: var(--black);
     border-right: 1px solid #EEEEEE;
 }
 .portofoliu__exemplu__tip {
-    /* font-weight: 400; */
     font-size: 16px;
     line-height: 1.9;
     color: var(--gray);
@@ -678,8 +659,6 @@ color: var(--black);
 .portofoliu__exemplu:hover .portofoliu__exemplu__nume,
 .portofoliu__exemplu:hover .portofoliu__exemplu__tip {
     color: var(--black);
-    /* Ensure text color remains black */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* Add shadow effect */
     cursor: pointer;
 }
