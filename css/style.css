@@ -205,6 +205,14 @@ color: var(--black);
     z-index: 0;
 }
 
+/* CSS for studio.html */
+.hero-section-studio.section {
+    width: 1600px;
+    background-color: transparent;
+    /* Background color for webstudio.html */
+    position: relative;
+}
+
 /* CSS for webstudio.html */
 .hero-section.section {
     width: 1600px;
@@ -272,8 +280,6 @@ color: var(--black);
 /* What we do section style */
 .we-do-section.section {
     background-color: var(--white);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* Adding shadow effect */
 }
 
 .we-do-section__features.container {
@@ -400,11 +406,33 @@ color: var(--black);
     /* Adjust hover color as needed */
 }
 
+.team-icons {
+    display: flex;
+    gap: 10px;
+    /* Adjust the gap between icons as needed */
+    align-items: center;
+    /* Center the icons vertically */
+    justify-content: center;
+    /* Center the icons horizontally */
+}
+
+.team-icons svg {
+    fill: #000;
+    transition: fill 0.3s ease;
+    border-radius: 80%;
+}
+
+.team-icons svg:hover {
+    background-color: #2196F3;
+    /* Change the color to #2196F3 on hover */
+    cursor: pointer;
+    border-radius: 60%;
+}
+
 /* Regular Customers section style */
 .regular-customers.section {
     background-color: var(--white);
     padding: 50px 0;
-    /* Adjust padding as needed */
     text-align: center;
 }
 
@@ -420,29 +448,55 @@ color: var(--black);
     height: 60px;
     margin: 20px;
     fill: var(--primary-color);
-    /* Adjust fill color as needed */
 }
 
 .svg-box {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    /* Adjust the gap between SVG elements */
     border: 2px solid #ccc;
-    /* Border style */
     padding: 10px;
-    /* Padding inside the box */
 }
 
 .svg-box svg {
-    flex: 0 0 calc(33.333% - 20px);
-    /* Adjust the width of each SVG element */
+    flex: 0 0 calc(33.333% - 20px);/
+}
+
+.regular {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.regular svg {
+    width: 150px;
+    height: 100px;
+    border: 3px solid #AFB1B8;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.regular svg:hover {
+    border-color: #2196f3;
+    cursor: pointer;
+    color:#2196f3;
+    fill: #2196f3;
+}
+
+.regular svg path {
+    background-color: #2196F3;
+    transition: fill 0.3s ease;
+}
+
+.regular svg:hover path {
+    background-color: #2196f3;
 }
 
 /* Optional hover effect for SVG icons */
 .regular-customers svg:hover {
     opacity: 0.8;
-    /* Adjust opacity as needed */
 }
 
 /* Footer section style*/
@@ -454,8 +508,9 @@ color: var(--black);
 .footer.container {
     height: 251px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    margin-left: -234px;
+    padding-top: 56px;
 }
 
 .footer__logo a {
@@ -495,23 +550,55 @@ color: var(--black);
 
 .footer-text {
     color: var(--white);
-    width: 79px;
+    width: 87px;
     height: 16px;
-    top: 2754px;
-    left: 516px;
-    gap: 0px;
-    opacity: 0;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
 }
 
 .footer__contact-info {
     margin-bottom: 20px;
-    /* Adjust the margin as needed */
 }
 
 .footer__social-icons {
-    margin-top: 10px; /* Adjust the margin-top value as needed */
+    margin-top: 26px;
+    padding-left: 75px;
 }
 
+.icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    /* Center align the icons horizontally */
+}
+
+.icons svg {
+    width: 20px;
+    height: 20px;
+    fill: #000;
+    transition: fill 0.3s ease;
+    border-radius: 60%;
+}
+
+.icons svg:hover {
+    background-color: #2196f3;
+    cursor: pointer;
+}
+
+.icons svg:hover::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(33, 150, 243, 0.5);
+}
 
  /* Style Portfolio */
 
