@@ -36,6 +36,21 @@ color: var(--black);
     border-bottom: 1px solid #ECECEC;
 }
 
+/* Add the new CSS block here */
+.header__navigation a.current::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    /* Adjust the height as needed */
+    background-color: var(--blue);
+    /* Use your preferred highlight color */
+    position: absolute;
+    bottom: -2px;
+    /* Adjust the position as needed */
+    left: 0;
+}
+
 .header.container {
     height: 80px;
     justify-content: space-between;
@@ -92,6 +107,7 @@ color: var(--black);
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--gray);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header__info a {
@@ -136,6 +152,7 @@ color: var(--black);
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--gray);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Hero section style*/
@@ -259,6 +276,7 @@ color: var(--black);
 .hero-section__service:hover,
 .hero-section__service:focus {
     transform: scale(1.1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-section img {
@@ -391,6 +409,7 @@ color: var(--black);
     width: 24px;
     height: 24px;
     fill: #000;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-section__card svg:hover {
@@ -412,7 +431,6 @@ color: var(--black);
 
 .team-icons svg:hover {
     background-color: #2196F3;
-    /* Change the color to #2196F3 on hover */
     cursor: pointer;
     border-radius: 60%;
 }
@@ -432,11 +450,8 @@ color: var(--black);
 
 .regular-customers svg {
     display: flex;
-    /* Added */
     justify-content: center;
-    /* Added */
     align-items: center;
-    /* Added */
     width: 106px;
     height: 60px;
     margin: 20px;
@@ -519,6 +534,7 @@ color: var(--black);
 
 .footer__logo a {
     color: var(--white);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer__address {
@@ -534,6 +550,7 @@ color: var(--black);
     color: var(--white);
     text-decoration: none;
     cursor: pointer;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer__address a:hover,
@@ -550,6 +567,7 @@ color: var(--black);
 
 .footer svg:hover {
     opacity: 0.8;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-text {
@@ -603,78 +621,140 @@ color: var(--black);
     background-color: rgba(33, 150, 243, 0.5);
 }
 
- /* Style Portfolio */
-
- .portofoliu.section {
+/* Portofolio Section */
+.portofoliu.section {
     background-color: var(--white);
     margin: auto;
+}
 
- }
- 
- .portofoliu__navigare__lista.container {
+.portofoliu__navigare__lista.container {
     width: 1170px;
     justify-content: center;
     gap: 8px;
     list-style: none;
     margin-bottom: 50px;
-  
- }
+}
 
- /* Navigation Buttons */
+/* Navigation Buttons */
+.portofoliu__navigare button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    background-color: var(--gray-background);
+    cursor: pointer;
+    padding: 6px 22px;
+    border-radius: 4px 0px 0px 0px;
+    transition: box-shadow 0.3s ease;
+}
 
- .portofoliu__navigare button {
-     font-weight: 500;
-     font-size: 16px;
-     line-height: 1.6;
-     text-align: center;
-     background-color: var(--gray-background);
-     cursor: pointer;
-     padding: 6px 22px;
-     border-radius: 4px 0px 0px 0px;
-     transition: box-shadow 0.3s ease;
- }
+.portofoliu__navigare button:hover,
+.portofoliu__navigare button:focus {
+    background-color: var(--blue);
+    color: var(--white);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
 
- .portofoliu__navigare button:hover,
- .portofoliu__navigare button:focus {
-     background-color: var(--blue);
-     color: var(--white);
-     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
- }
+.portofoliu__exemple.container {
+    width: 1170px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: auto;
+}
 
- /* Exemples Portfolio*/
+.portofoliu__exemplu {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
 
- .portofoliu__exemple.container {
-     width: 1170px;
-     flex-wrap: wrap;
-     justify-content: center;
-     gap: 30px;
-     margin: auto;
- }
+.portofoliu__exemplu img {
+    position: relative;
+    z-index: 1;
+}
 
- .portofoliu__exemplu {
-     position: relative;
-     /* Add position relative to create a stacking context */
- }
+.portofoliu__exemplu img::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.5);
+    z-index: 2;
+    transition: transform 0.3s ease;
+    opacity: 0;
+}
 
- .portofoliu__exemplu__nume,
- .portofoliu__exemplu__tip {
-     font-weight: 700;
-     font-size: 18px;
-     line-height: 2;
-     letter-spacing: 0.06em;
-     text-align: left;
-     padding-left: 24px;
- }
+.portofoliu__exemplu img:hover::after {
+    transform: translateY(-100%);
+    opacity: 1;
+}
 
- .portofoliu__exemplu__tip {
-     font-size: 16px;
-     line-height: 1.9;
-     color: var(--gray);
-     letter-spacing: 0.03em;
-     padding-bottom: 20px;
- }
+.portofoliu__exemplu__container {
+    position: relative;
+    overflow: hidden;
+}
 
- .portofoliu__exemplu:hover {
-     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-     cursor: pointer;
- }
+.portofoliu__exemplu__container::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.5);
+    z-index: 1;
+    transition: transform 0.3s ease;
+    opacity: 0;
+}
+
+.portofoliu__exemplu:hover .portofoliu__exemplu__container::after {
+    opacity: 1;
+}
+
+.portofoliu__exemplu__nume,
+.portofoliu__exemplu__tip {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    text-align: left;
+    padding: 10px;
+}
+
+.portofoliu__exemplu__tip {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--gray);
+    letter-spacing: 0.03em;
+    padding-top: 5px;
+}
+
+.portofoliu__exemplu img {
+    position: relative;
+    z-index: 1;
+}
+
+.portofoliu__exemplu::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.5);
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.portofoliu__exemplu:hover:not(.portofoliu__exemplu__nume):not(.portofoliu__exemplu__tip)::after {
+    transform: translateY(-100%);
+}
+
+.portofoliu__exemplu__nume:hover:not(img),
+.portofoliu__exemplu__tip:hover:not(img) {
+    transition: none;
+}
